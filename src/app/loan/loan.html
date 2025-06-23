@@ -1,0 +1,75 @@
+<h1 class="title">Loan</h1>
+
+<button class="open-model" (click)="openModal()">Update</button>
+<div class="model">
+    <div class="model-header">
+        <h2>Update Loan</h2>
+        <button class="close-model" (click)="closeModal()">&times;</button>
+    </div>
+    <div class="model-body">
+        <div class="each-input">
+            <label for="">Principal</label>
+            <input type="text" [(ngModel)]="update_principal" placeholder="${{principal}}" />
+        </div>
+        <div class="each-input">
+            <label for="">Duration</label>
+            <input type="text" [(ngModel)]="update_duration" placeholder="{{duration}}month" />
+        </div>
+        <div class="each-input">
+            <label for="">Interest</label>
+            <input type="text" [(ngModel)]="update_interestRate" placeholder="{{interestRate}}%" />
+        </div>
+    </div>
+    <div class="model-footer">
+        <button class="btn-update" (click)="updateLoan()">Update</button>
+        <button class="btn-close" (click)="closeModal()">Close</button>
+    </div>
+</div>
+<div class="overlay" (click)="closeModal()"></div>
+
+
+
+<table class="table-info">
+    <tbody>
+        <tr>  
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Interest</th>
+        </tr>
+        <tr>
+            <td>${{principal}}</td>
+            <td>{{duration}} month</td>
+            <td>{{interestRate}}%</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table-info">
+    <tbody>
+        <tr class="table-header">
+            <th>NO</th>
+            <th>Pricipal</th>
+            <th>Interest</th>
+            <th>Total</th>
+        </tr>
+        @for(data of this.loan; track data.id){
+        <tr>
+            <td>{{data.id}}</td>
+            <td>$ {{data.principal}}</td>
+            <td>$ {{data.interest}}</td>
+            <td>$ {{data.total}}</td>
+        </tr>
+        }
+        <tr>
+            <td style="border: none;"></td>
+        </tr>
+        <tr class="short-row">
+            <td [width]="100">General total</td>
+            <td>$ {{this.totalAmount}}</td>
+        </tr>
+        <tr class="short-row">
+            <td [width]="100">Total interest</td>
+            <td>$ {{this.totalInterest}}</td>
+        </tr>
+    </tbody>
+</table>
