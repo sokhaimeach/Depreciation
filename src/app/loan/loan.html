@@ -37,7 +37,7 @@
             <th>Interest</th>
         </tr>
         <tr>
-            <td>${{principal}}</td>
+            <td>${{principal.toFixed(2)}}</td>
             <td>{{duration}} month</td>
             <td>{{interestRate}}%</td>
         </tr>
@@ -55,9 +55,9 @@
         @for(data of this.loan; track data.id){
         <tr>
             <td>{{data.id}}</td>
-            <td>$ {{data.principal}}</td>
-            <td>$ {{data.interest}}</td>
-            <td>$ {{data.total}}</td>
+            <td>$ {{data.principal.toFixed(2)}}</td>
+            <td>$ {{data.interest.toFixed(2)}}</td>
+            <td>$ {{data.total.toFixed(2)}}</td>
         </tr>
         }
         <tr>
@@ -65,11 +65,11 @@
         </tr>
         <tr class="short-row">
             <td [width]="100">General total</td>
-            <td>$ {{this.totalAmount}}</td>
+            <td>$ {{this.totalAmount.toFixed(2)}}</td>
         </tr>
         <tr class="short-row">
             <td [width]="100">Total interest</td>
-            <td>$ {{this.totalInterest}}</td>
+            <td>$ {{this.totalInterest.toFixed(2)}}</td>
         </tr>
     </tbody>
 </table>
