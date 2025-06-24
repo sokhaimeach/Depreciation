@@ -1,0 +1,47 @@
+<section class="receipt">
+    <h1 class="title">SOKHAI SHOP</h1>
+    <span class="address">Address: 122 St, Sensok, Phonm Penh</span>
+    <span class="address pad">Tel: 0123456789</span>
+    <span class="stars">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>
+    <span class="cash">CASH RECEIPT</span>
+    <span class="stars">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>
+    <div class="description">
+        <div class="des-tap">
+            <span>Description</span>
+            <span class="price">Price</span>
+        </div>
+        @for(item of this.receipt; track item.id) {
+            <div class="item">
+                <span class="name">{{item.descripttion}}</span>
+                <span class="price">${{item.price.toFixed(2)}}</span>
+            </div>
+        }
+    </div>
+    <span class="stars">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>
+    <div class="total style">
+        <div class="total-label">Total</div>
+        <div class="total-price">${{this.total().toFixed(2)}}</div>
+    </div>
+    <div class="total">
+        <div class="total-label">Cash</div>
+        <div class="total-price">${{this.cash.toFixed(2)}}</div>
+    </div>
+    <div class="total">
+        <div class="total-label">Change</div>
+        <div class="total-price">${{(this.cash - this.total()).toFixed(2)}}</div>
+    </div>
+    <span class="stars">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>
+    <div class="total">
+        <div class="total-label">Bank card</div>
+        <div class="total-price">..... .... .234</div>
+    </div>
+    <div class="total">
+        <div class="total-label">Approval Code</div>
+        <div class="total-price">#123456</div>
+    </div>
+    <span class="stars">★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>
+    <p class="thank-you">Thank you</p>
+    <p class="barcode">{{bacode}}</p>
+</section>
+
+

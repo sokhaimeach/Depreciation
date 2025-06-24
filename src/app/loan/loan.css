@@ -1,10 +1,32 @@
 .title {
-    color: purple;
+    color: #00ffc4;
+    margin-top: 50px;
+    margin-bottom: 10px;
     text-align: center;
+    font-size: 50px;
+    filter: drop-shadow(0 0 10px #00ffc4);
+}
+
+.open-model {
+    width: 70px;
+    height: 30px;
+    background-color: #00ffc4;
+    color: #101114;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 0.5px #00ffc4;
 }
 
 .table-info {
-    border-collapse: collapse;
+    border-collapse: inherit;
+    border-spacing: 0;
+    border: 2px solid #00ffc4;
     width: 60%;
     text-align: center;
     left: 50%;
@@ -12,6 +34,9 @@
     transform: translateX(-50%);
     margin-bottom: 50px;
     z-index: 200;
+    background-color: #4a4d57;
+    border-radius: 20px;
+    
 }
 
 @media (max-width: 600px) {
@@ -22,17 +47,36 @@
 }
 
 .table-header {
-    background-color: rgb(146, 255, 146);
+    background-color: #101114;
 }
 
-th,
-td {
-    border: 1px solid black;
+
+th, td {
     padding: 8px;
+    color: #00ffc4;
+    border-bottom: 2px solid #00ffc4;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.table-total {
+    border-collapse: inherit;
+    border-spacing: 0;
+    width: 250px;
+    text-align: center;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    z-index: 200;
+    background-color: #00ffc4;
+    border-radius: 20px;
 }
 
 tr.short-row td {
-    background-color: #ffb0b0;
+    color: #101114;
 }
 
 .model {
@@ -139,70 +183,4 @@ label {
     font-size: 20px;
     color: #333;
     font-weight: bold;
-}
-
-.blur {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: rgba(150, 97, 255, 0.994);
-    filter: blur(300px);
-    transition: filter 0.2s ease-in-out;
-    animation: floatBlur 70s infinite ease-in-out;
-    z-index: 100;
-}
-
-@keyframes floatBlur {
-    0% {
-        transform: translate(0, 0);
-        background-color: rgba(150, 97, 255, 0.994);
-    }
-
-    12.5% {
-        transform: translate(80vw, 40vh);
-        background-color: #d4ff8ffd;
-    }
-
-    25% {
-        transform: translate(30vw, 0vh);
-        background-color: #8fcdfffd;
-    }
-
-    37.5% {
-        transform: translate(10vw, 40vh);
-        background-color: #ff8f8ffd;
-    }
-
-    50% {
-        transform: translate(0, 50vh);
-        background-color: #8fffd6fd;
-    }
-
-    62.5% {
-        transform: translate(0, 0);
-        background-color: #a08ffffd;
-    }
-
-    62.5% {
-        transform: translate(100vw, 0vh);
-        background-color: #fff06bfd;
-    }
-
-    75% {
-        transform: translate(0, 50vh);
-        background-color: #ffb0b0fd;
-    }
-
-    87.5% {
-        transform: translate(0, 50vh);
-        background-color: #ff7474fd;
-    }
-
-    100% {
-        transform: translate(0, 0);
-        background-color: rgba(150, 97, 255, 0.994);
-    }
 }

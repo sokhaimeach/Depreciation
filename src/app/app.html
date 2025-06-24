@@ -1,4 +1,7 @@
-<!-- <app-loan></app-loan> -->
-
+<nav class="navbar">
+    <div class="active-box"></div>
+    <a routerLink="receipt" (click)="left()"><button class="nav-btn1">Receipt</button></a>
+    <a routerLink="loan" (click)="right()"><button class="nav-btn2 inactive">Loan</button></a>
+</nav>
 
 <router-outlet />

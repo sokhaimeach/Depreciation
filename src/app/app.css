@@ -1,0 +1,91 @@
+.navbar {
+    background-color: #00ffc4;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px 0.5px #00ffc4;
+    animation: navbar_anime 5s ease infinite;
+}
+
+.nav-btn1, .nav-btn2 {
+    width: 90px;
+    height: 40px;
+    background: none;
+    color: #00ffc4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1001;
+}
+
+.inactive {
+    color: #101114;;
+}
+
+.active-box {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    background-color: #101114;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0.5px #00ffc4;
+    z-index: 1000;
+    left: 15px;}
+
+.left {
+    right: 15px;
+    animation: left 0.3s ease-in-out forwards;
+}
+
+.right {
+    left: 15px;
+    animation: right 0.3s ease-in-out forwards;
+}
+
+@keyframes left {
+    0% {
+        left: 115px;
+    }
+    100% {
+        left: 15px;
+    }
+}
+
+@keyframes right {
+    0% {
+        left: 15px;
+    }
+    100% {
+        left: 115px;
+    }
+}
+
+@keyframes navbar_anime {
+    0% {
+        box-shadow: 0 0 20px 0.5px #00ffc4;
+    }
+    25% {
+        box-shadow: 0 0 20px 0.5px #3842ff;
+    }
+    50% {
+        box-shadow: 0 0 20px 0.5px #ffee00;
+    }
+    75% {
+        box-shadow: 0 0 20px 0.5px #ff0000;
+    }
+    100% {
+        box-shadow: 0 0 20px 0.5px #00ffc4;
+    }
+}

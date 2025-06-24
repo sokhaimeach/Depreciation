@@ -31,7 +31,7 @@
 
 <table class="table-info">
     <tbody>
-        <tr>  
+        <tr>
             <th>Price</th>
             <th>Duration</th>
             <th>Interest</th>
@@ -60,9 +60,11 @@
             <td>$ {{data.total.toFixed(2)}}</td>
         </tr>
         }
-        <tr>
-            <td style="border: none;"></td>
-        </tr>
+    </tbody>
+</table>
+
+<table class="table-total">
+    <tbody>
         <tr class="short-row">
             <td [width]="100">General total</td>
             <td>$ {{this.totalAmount.toFixed(2)}}</td>
@@ -73,5 +75,3 @@
         </tr>
     </tbody>
 </table>
-
-<div class="blur"></div>
