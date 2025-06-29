@@ -18,9 +18,14 @@
     cursor: pointer;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
+    transition: all 0.1s ease-in-out;
     margin-bottom: 20px;
     box-shadow: 0 0 20px 0.5px #00ffc4;
+}
+
+.open-model:active {
+    transform: translateX(-50%) scale(0.5);
 }
 
 .table-info {
